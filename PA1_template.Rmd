@@ -38,4 +38,10 @@ weekdayFactors <- grep ("[MTWF]", weekdays(processedActivity$date))
 hist(processedActivity[weekendFactors, "steps"])
 hist(processedActivity[weekdayFactors, "steps"])
 ```
+## Write figures to files
+```{r}
+png(file ="figure/plot1.png")
+hist(processedActivity[weekendFactors, "steps"])
+dev.off()
+```
 ## show a histogram of weekdays
